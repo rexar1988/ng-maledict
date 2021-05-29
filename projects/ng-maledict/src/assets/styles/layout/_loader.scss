@@ -1,0 +1,30 @@
+.m-loader {
+  display: block;
+}
+
+.spinner {
+  --spinnerColor: #1a73e8;
+
+  position: relative;
+}
+
+.spinner,
+.spinner * {
+  box-sizing: border-box;
+}
+
+.spinner__elements {
+  display: flex;
+  justify-content: center;
+}
+
+.spinner__elem {
+  background-color: var(--spinnerColor);
+}
+
+.spinner__text {
+  margin-top: .7em;
+  font: {
+    size: 1.1em;
+  };
+}

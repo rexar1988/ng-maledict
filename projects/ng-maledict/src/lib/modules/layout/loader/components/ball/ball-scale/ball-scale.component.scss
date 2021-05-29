@@ -1,0 +1,23 @@
+.spinner__elem {
+  border-radius: 100%;
+  margin: 0.14285714285714285em;
+  height: 4.285714285714286em;
+  width: 4.285714285714286em;
+  animation: ball-scale 1s 0s ease-in-out infinite;
+  animation-fill-mode: both;
+}
+
+.spinner__text {
+  margin-top: .7em;
+}
+
+@keyframes ball-scale {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}

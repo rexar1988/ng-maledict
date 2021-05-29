@@ -1,0 +1,56 @@
+.spinner__elements {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.35714285714285715em;
+}
+
+.spinner__elem {
+  background-color: #1a73e8;
+  width: 0.286em;
+  height: 2.5em;
+  border-radius: 2px;
+  margin: 0 0.14285714285714285em;
+  animation-fill-mode: both;
+  animation-name: line-scale-party;
+  animation-iteration-count: infinite;
+
+  &--1 {
+    animation-delay: 0.48s;
+    animation-duration: 0.54s;
+  }
+
+  &--2 {
+    animation-delay: -0.15s;
+    animation-duration: 1.15s;
+  }
+
+  &--3 {
+    animation-delay: 0.04s;
+    animation-duration: 0.77s;
+  }
+
+  &--4 {
+    animation-delay: -0.12s;
+    animation-duration: 0.61s;
+  }
+}
+
+.spinner__text {
+  font: {
+    size: 1.1em;
+  };
+}
+
+@keyframes line-scale-party {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

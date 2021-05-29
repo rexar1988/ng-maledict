@@ -8,9 +8,8 @@
     "strict": true,
     "noImplicitReturns": true,
     "paths": {
-      "grid": [
-        "dist/grid/grid",
-        "dist/grid"
+      "ng-maledict": [
+        "dist/ng-maledict",
       ]
     },
     "noFallthroughCasesInSwitch": true,

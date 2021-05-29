@@ -1,0 +1,48 @@
+.spinner__elements {
+  position: relative;
+  height: 3.5714285714285716em;
+}
+
+.spinner__elem {
+  animation-fill-mode: both;
+  position: absolute;
+  top: 0;
+  width: 3.5714285714285716em;
+  height: 3.5714285714285716em;
+  border-radius: 100%;
+  border: 0.14285714285714285em solid var(--spinnerColor);
+  background-color: transparent;
+  animation: ball-scale-ripple-multiple 1.25s 0s infinite cubic-bezier(0.21, 0.53, 0.56, 0.8);
+
+  &--1 {
+    animation-delay: -0.8s;
+  }
+
+  &--2 {
+    animation-delay: -0.6s;
+  }
+
+  &--3 {
+    animation-delay: -0.4s;
+  }
+
+  &--4 {
+    animation-delay: -0.2s;
+  }
+}
+
+@keyframes ball-scale-ripple-multiple {
+  0% {
+    transform: scale(0.1);
+    opacity: 1;
+  }
+
+  70% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 0.0;
+  }
+}

@@ -1,0 +1,79 @@
+.spinner__elements {
+  display: grid;
+  grid-template-columns: repeat(3, 1.0714285714285714em);
+  grid-template-rows: repeat(3, 1.0714285714285714em);
+}
+
+.spinner__elem {
+  width: 1.0714285714285714em;
+  height: 1.0714285714285714em;
+  border-radius: 100%;
+  margin: 0.14285714285714285em;
+  animation: {
+    fill-mode: both;
+    name: ball-grid-pulse;
+    iteration-count: infinite;
+    delay: 0s;
+  };
+
+  &--1 {
+    animation-delay: 0.22s;
+    animation-duration: 0.9s;
+  }
+
+  &--2 {
+    animation-delay: 0.64s;
+    animation-duration: 1s;
+  }
+
+  &--3 {
+    animation-delay: -0.15s;
+    animation-duration: 0.63s;
+  }
+
+  &--4 {
+    animation-delay: -0.03s;
+    animation-duration: 1.24s;
+  }
+
+  &--5 {
+    animation-delay: 0.08s;
+    animation-duration: 1.37s;
+  }
+
+  &--6 {
+    animation-delay: 0.43s;
+    animation-duration: 1.55s;
+  }
+
+  &--7 {
+    animation-delay: 0.05s;
+    animation-duration: 0.7s;
+  }
+
+  &--8 {
+    animation-delay: 0.05s;
+    animation-duration: 0.97s;
+  }
+
+  &--9 {
+    animation-delay: 0.3s;
+    animation-duration: 0.63s;
+  }
+}
+
+@keyframes ball-grid-pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.5);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

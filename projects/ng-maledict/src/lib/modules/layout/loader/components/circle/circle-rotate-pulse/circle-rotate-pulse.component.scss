@@ -1,0 +1,57 @@
+.spinner__elements {
+  position: relative;
+  height: 2.142857142857143em;
+}
+
+.spinner__elem {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 100%;
+  animation-fill-mode: both;
+}
+
+.spinner__elem:first-child {
+  height: 1.1428571428571428em;
+  width: 1.1428571428571428em;
+  top: 0.5em;
+  left: 2.357142857142857em;
+  animation: circle-rotate-pulse-scale 1s 0s cubic-bezier(0.09, 0.57, 0.49, 0.9) infinite;
+}
+
+.spinner__elem:last-child {
+  position: absolute;
+  width: 2.5714285714285716em;
+  height: 2.5714285714285716em;
+  left: 1.6428571428571428em;
+  top: -0.21428571428571427em;
+  background: transparent;
+  border: 0.14285714285714285em solid var(--spinnerColor);
+  border-color: var(--spinnerColor) transparent var(--spinnerColor) transparent;
+  animation: circle-rotate-pulse-rotate 1s 0s cubic-bezier(0.09, 0.57, 0.49, 0.9) infinite;
+  animation-duration: 1s;
+}
+
+@keyframes circle-rotate-pulse-rotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(180deg) scale(0.6);
+  }
+
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes circle-rotate-pulse-scale {
+  30% {
+    transform: scale(0.3);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

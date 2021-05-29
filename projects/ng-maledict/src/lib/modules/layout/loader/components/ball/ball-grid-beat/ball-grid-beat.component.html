@@ -1,0 +1,10 @@
+<div class="spinner spinner--line-scale">
+  <div class="spinner__elements">
+    <ng-container *ngFor="let i of [1, 2, 3, 4, 5, 6, 7, 8, 9]">
+      <div class="spinner__elem spinner__elem--{{ i }}"></div>
+    </ng-container>
+  </div>
+  <h4 *ngIf="showLoadingText" class="spinner__text">
+    {{ loadingText }}
+  </h4>
+</div>

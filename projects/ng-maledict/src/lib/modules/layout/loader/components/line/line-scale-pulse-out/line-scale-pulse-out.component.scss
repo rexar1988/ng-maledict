@@ -1,0 +1,37 @@
+.spinner__elements {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.spinner__elem {
+  width: 0.2857142857142857em;
+  height: 2.5em;
+  border-radius: 2px;
+  margin: 0 0.14285714285714285em;
+  animation-fill-mode: both;
+  animation: line-scale-pulse-out 0.9s -0.6s infinite cubic-bezier(0.85, 0.25, 0.37, 0.85);
+}
+
+.spinner__elem--2,
+.spinner__elem--4 {
+  animation-delay: -0.4s;
+}
+
+.spinner__elem--1,
+.spinner__elem--5 {
+  animation-delay: -0.2s;
+}
+
+@keyframes line-scale-pulse-out {
+  0% {
+    transform: scaley(1); }
+
+  50% {
+    transform: scaley(0.4);
+  }
+
+  100% {
+    transform: scaley(1);
+  }
+}

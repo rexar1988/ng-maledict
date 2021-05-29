@@ -1,0 +1,10 @@
+<div class="loader" [ngStyle]="{ fontSize: fontSize }">
+  <div class="loader__spinner" [hidden]="!loading">
+    <div class="loader__host">
+      <ng-template mHost></ng-template>
+    </div>
+  </div>
+  <div class="loader__content" [hidden]="loading">
+    <ng-content></ng-content>
+  </div>
+</div>

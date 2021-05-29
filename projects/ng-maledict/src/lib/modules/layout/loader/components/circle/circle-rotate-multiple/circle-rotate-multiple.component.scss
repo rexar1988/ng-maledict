@@ -1,0 +1,44 @@
+.spinner {
+  position: relative;
+}
+
+.spinner__elements {
+  height: 2.5em;
+}
+
+.spinner__elem {
+  background-color: transparent;
+  animation-fill-mode: both;
+  position: absolute;
+  top: 0;
+  border: 0.14285714285714285em solid var(--spinnerColor);
+  border-bottom-color: transparent;
+  border-top-color: transparent;
+  border-radius: 100%;
+  height: 2.5em;
+  width: 2.5em;
+  animation: circle-rotate-multiple 1s 0s ease-in-out infinite;
+
+  &:last-child {
+    top: 0.7142857142857143em;
+    width: 1.0714285714285714em;
+    height: 1.0714285714285714em;
+    animation-duration: 0.5s;
+    border-color: var(--spinnerColor) transparent var(--spinnerColor) transparent;
+    animation-direction: reverse;
+  }
+}
+
+@keyframes circle-rotate-multiple {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(180deg) scale(0.6);
+  }
+
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}

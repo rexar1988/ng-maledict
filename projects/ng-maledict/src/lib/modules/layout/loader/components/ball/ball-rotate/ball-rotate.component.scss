@@ -1,0 +1,49 @@
+.spinner__elem {
+  width: 1.0714285714285714em;
+  height: 1.0714285714285714em;
+  border-radius: 100%;
+  margin: 0.14285714285714285em;
+  animation-fill-mode: both;
+  position: relative;
+  animation: ball-rotate 1s 0s cubic-bezier(0.7, -0.13, 0.22, 0.86) infinite;
+
+  &:before,
+  &:after {
+    content: "";
+    background-color: var(--spinnerColor);
+    width: 1.0714285714285714em;
+    height: 1.0714285714285714em;
+    border-radius: 100%;
+    margin: 0.14285714285714285em;
+    position: absolute;
+    opacity: 0.8;
+  }
+
+  &:before {
+    top: 0;
+    left: -2em;
+  }
+
+  &:after {
+    top: 0;
+    left: 1.7857142857142858em;
+  }
+}
+
+.spinner__text {
+  margin-top: 2.142857142857143em;
+}
+
+@keyframes ball-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
