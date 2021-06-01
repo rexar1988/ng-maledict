@@ -1,3 +1,4 @@
+export * from './lib/modules/m-dialog/m-dialog.module';
 export * from './lib/modules/layout';
 
 // Types

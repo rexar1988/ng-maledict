@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GridModule, LoaderModule } from 'ng-maledict';
 
 @NgModule({
   declarations: [
@@ -10,8 +10,7 @@ import { GridModule, LoaderModule } from 'ng-maledict';
   ],
   imports: [
     BrowserModule,
-    GridModule,
-    LoaderModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

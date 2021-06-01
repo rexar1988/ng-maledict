@@ -3,6 +3,45 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "ng-maledict": {
+      "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/ng-maledict",
+      "sourceRoot": "projects/ng-maledict/src",
+      "prefix": "m",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ng-maledict/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-maledict/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ng-maledict/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-maledict/src/test.ts",
+            "tsConfig": "projects/ng-maledict/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-maledict/karma.conf.js"
+          }
+        }
+      }
+    },
     "testing": {
       "projectType": "application",
       "schematics": {
@@ -103,37 +142,6 @@
               "projects/testing/src/styles.scss"
             ],
             "scripts": []
-          }
-        }
-      }
-    },
-    "ng-maledict": {
-      "projectType": "library",
-      "root": "projects/ng-maledict",
-      "sourceRoot": "projects/ng-maledict/src",
-      "prefix": "m",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
-          "options": {
-            "project": "projects/ng-maledict/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "projects/ng-maledict/tsconfig.lib.prod.json"
-            },
-            "development": {
-              "tsConfig": "projects/ng-maledict/tsconfig.lib.json"
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/ng-maledict/src/test.ts",
-            "tsConfig": "projects/ng-maledict/tsconfig.spec.json",
-            "karmaConfig": "projects/ng-maledict/karma.conf.js"
           }
         }
       }
