@@ -1,6 +1,6 @@
-import { Component, ComponentFactoryResolver, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
-import { PopupTestComponent } from '../popup-test/popup-test.component';
+import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 import { MDialogService } from 'ng-maledict';
+import { PopupTestComponent } from '../popup-test/popup-test.component';
 
 @Component({
   selector: 'app-dialog',
@@ -11,11 +11,10 @@ export class DialogComponent implements OnInit {
   @ViewChild('dialog', { read: ViewContainerRef, static: true, }) dialog: ViewContainerRef | undefined;
 
   constructor(
-    private mDialog: MDialogService,
-    private componentFactoryResolver: ComponentFactoryResolver
+    private readonly mDialog: MDialogService,
   ) { }
 
   ngOnInit(): void {
-    this.mDialog.open<PopupTestComponent>(PopupTestComponent, { name: 'denis' });
+    this.mDialog.open(PopupTestComponent, { lastName: 'lubchenko' });
   }
 }
