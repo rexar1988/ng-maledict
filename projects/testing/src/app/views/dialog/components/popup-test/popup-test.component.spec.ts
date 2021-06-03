@@ -1,22 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GColComponent } from 'projects/maledict-ui/src/modules/grid/components/grid-col/grid-col.components';
+import { PopupTestComponent } from './popup-test.component';
 
-describe('GColComponent', () => {
-  let component: GColComponent;
-  let fixture: ComponentFixture<GColComponent>;
+describe('PopupTestComponent', () => {
+  let component: PopupTestComponent;
+  let fixture: ComponentFixture<PopupTestComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [
-        GColComponent,
-      ],
+      declarations: [ PopupTestComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GColComponent);
+    fixture = TestBed.createComponent(PopupTestComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

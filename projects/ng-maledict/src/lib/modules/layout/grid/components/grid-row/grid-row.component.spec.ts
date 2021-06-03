@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GRowComponent } from 'projects/maledict-ui/src/modules/grid/components/grid-row/grid-row.component';
+import { GRowComponent } from 'projects/maledict-ui/src/modules/grid/components/grid-row/grid-row.components';
 
 describe('GRowComponent', () => {
   let component: GRowComponent;

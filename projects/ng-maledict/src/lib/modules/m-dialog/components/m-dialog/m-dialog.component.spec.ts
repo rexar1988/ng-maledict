@@ -1,22 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GColComponent } from 'projects/maledict-ui/src/modules/grid/components/grid-col/grid-col.components';
+import { MDialogComponent } from './m-dialog.component';
 
-describe('GColComponent', () => {
-  let component: GColComponent;
-  let fixture: ComponentFixture<GColComponent>;
+describe('MDialogComponent', () => {
+  let component: MDialogComponent;
+  let fixture: ComponentFixture<MDialogComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [
-        GColComponent,
-      ],
+      declarations: [ MDialogComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GColComponent);
+    fixture = TestBed.createComponent(MDialogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

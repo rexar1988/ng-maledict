@@ -3,15 +3,18 @@ import { CommonModule } from '@angular/common';
 
 import { DialogRoutingModule } from './dialog-routing.module';
 import { DialogComponent } from './components/dialog/dialog.component';
-
+import { PopupTestComponent } from './components/popup-test/popup-test.component';
+import { MDialogModule } from 'ng-maledict';
 
 @NgModule({
   declarations: [
-    DialogComponent
+    DialogComponent,
+    PopupTestComponent
   ],
   imports: [
     CommonModule,
-    DialogRoutingModule
+    DialogRoutingModule,
+    MDialogModule,
   ]
 })
 export class DialogModule { }
