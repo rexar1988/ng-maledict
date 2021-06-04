@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
+import { Component, Injector, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 import { MDialogService } from 'ng-maledict';
 import { PopupTestComponent } from '../popup-test/popup-test.component';
 
@@ -12,9 +12,14 @@ export class DialogComponent implements OnInit {
 
   constructor(
     private readonly mDialog: MDialogService,
-  ) { }
+    injector: Injector,
+  ) {
+    console.log(injector);
+
+  }
 
   ngOnInit(): void {
-    this.mDialog.open(PopupTestComponent, { lastName: 'lubchenko' });
+    const dialogRef = this.mDialog.open(PopupTestComponent, { lastName: 'lubchenko' });
+    console.log('dialogRef', dialogRef);
   }
 }
